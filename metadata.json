@@ -1,0 +1,6 @@
+{
+  "name": "Loan EMI Tracker",
+  "description": "Comprehensive personal debt tracker with loan entry, payment ledger, amortization schedules, calendar due dates, preclosure calculator, reports, and settings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

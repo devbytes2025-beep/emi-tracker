@@ -1,0 +1,65 @@
+{
+  "entities": {
+    "users": {
+      "path": "users/{userId}",
+      "description": "User profile information",
+      "fields": {
+        "name": { "type": "string", "description": "Full name" },
+        "email": { "type": "string", "description": "User email address" },
+        "photoUrl": { "type": "string", "description": "Avatar image URL" },
+        "occupation": { "type": "string", "description": "User occupation" },
+        "monthlyIncome": { "type": "number", "description": "Monthly income" },
+        "monthlyExpenses": { "type": "number", "description": "Monthly expenses" },
+        "creditScore": { "type": "number", "description": "Estimated credit score" }
+      }
+    },
+    "loans": {
+      "path": "users/{userId}/loans/{loanId}",
+      "description": "Loan profiles for a user",
+      "fields": {
+        "name": { "type": "string", "description": "Loan title/nickname" },
+        "bank": { "type": "string", "description": "Lending bank/institution" },
+        "type": { "type": "string", "description": "Loan type category" },
+        "borrowerName": { "type": "string", "description": "Primary borrower name" },
+        "accountNumber": { "type": "string", "description": "Loan account or reference number" },
+        "startDate": { "type": "string", "description": "Start date YYYY-MM-DD" },
+        "loanAmount": { "type": "number", "description": "Principal loan amount" },
+        "interestRate": { "type": "number", "description": "Annual interest rate percentage" },
+        "emiAmount": { "type": "number", "description": "Monthly EMI amount" },
+        "tenureMonths": { "type": "number", "description": "Loan duration in months" },
+        "paymentFrequency": { "type": "string", "description": "Monthly, Weekly, Quarterly" },
+        "dueDateDay": { "type": "number", "description": "Due day of month" },
+        "status": { "type": "string", "description": "Active, Overdue, Closed, Preclosed" },
+        "outstandingBalance": { "type": "number", "description": "Remaining balance" },
+        "totalPaidPrincipal": { "type": "number", "description": "Total principal paid" },
+        "totalPaidInterest": { "type": "number", "description": "Total interest paid" },
+        "payments": { "type": "array", "description": "List of recorded payment entries" },
+        "notes": { "type": "string", "description": "Optional notes" }
+      }
+    },
+    "notifications": {
+      "path": "users/{userId}/notifications/{notifId}",
+      "description": "User notification alerts",
+      "fields": {
+        "title": { "type": "string", "description": "Alert title" },
+        "message": { "type": "string", "description": "Notification content" },
+        "date": { "type": "string", "description": "ISO date string" },
+        "type": { "type": "string", "description": "Notification type" },
+        "isRead": { "type": "boolean", "description": "Read status" },
+        "loanId": { "type": "string", "description": "Associated loan ID" }
+      }
+    },
+    "settings": {
+      "path": "users/{userId}/settings/config",
+      "description": "User application settings",
+      "fields": {
+        "theme": { "type": "string", "description": "light or dark" },
+        "currency": { "type": "string", "description": "Currency symbol" },
+        "language": { "type": "string", "description": "Language code" },
+        "notificationsEnabled": { "type": "boolean", "description": "Alerts toggle" },
+        "emailAlerts": { "type": "boolean", "description": "Email alerts toggle" },
+        "autoReminders": { "type": "boolean", "description": "Auto reminders toggle" }
+      }
+    }
+  }
+}
